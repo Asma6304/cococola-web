@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    color: white;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color:#000;
+}
+#nav{
+    height:100px;
+    width: 100%;
+   /* background-color: red;*/
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    justify-content: space-between;
+
+}
+#nav-prt2{
+    display: flex;
+    /*background-color: blue;*/
+    width:55%;
+    align-items: center;
+    justify-content: space-between;
+    gap:15px;
+}
+#nav h1{
+    font-size: 20px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+}
+#nav>i{
+    font-size: 20px;
+    margin-right: 5px;
+}
+#nav h5{
+    font-size: 14px;
+    font-weight:600;
+    text-transform: capitalize;
+}
+#nav img{
+    height: 50px;
+}
+#line{
+    width: 80px;
+    height: 2px;
+    background-color: red;
+}
+#content{
+    height: calc(100% - 140px);
+    width: 100%;
+     /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+#left{
+    width: 36%;
+    height: 100%;
+    /* background-color: red;  */
+    padding: 110px 100px;
+}
+#right{
+    width: 36%;
+    height: 100%;
+     /* background-color: red; */
+     padding: 250px 100px;
+}
+#center{
+    width: 26%;
+    height: 100%;
+    /* background-color: yellow;  */
+    padding-top: 60px;
+}
+#left h1{
+    font-size: 55px;
+    line-height: 50px;
+    font-weight: 700;
+    margin-bottom:20px ;
+}
+#left span{
+    color: red;
+    font-weight: 500;
+}
+#left p{
+    font-size:18spx;
+    width:70%;
+    margin-bottom: 50px;
+    line-height: 22px;
+}
+#left button{
+    background-color: red;
+    padding: 20px 42px;
+    border-radius: 50px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+#left div{
+    display: inline-flex;
+    align-items: center;
+    gap:15px;
+}
+#left button>i{
+    margin-right: 10px;
+}
+.right-heart{
+    color: red;
+    font-size: 24px;
+}
+#center-bg{
+    height:88%;
+    width: 100%;
+    background-color: red;
+    border-top-left-radius: 1000px;
+    border-top-right-radius: 1000px;
+    background-image: url(https://pics.craiyon.com/2023-10-24/ce0a0318257d453da87077e55ff21786.webp);
+    filter:blur(3px);
+}
+#content>img{
+    height: 100%;
+    position: absolute;
+    left:49%;
+    transform: translate(-50%,0);
+    z-index: 99%;
+}
+#right-elem{
+    /* background-color: red; */
+    width: 350px;
+}
+#elem1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    /* background-color: blue; */
+    border-bottom: 1px solid #fff;
+    opacity: 0.4;
+}
+#elem1 h1{
+    font-size: 22px;
+    font-weight: 600;
+}
+#elem1 i{
+    font-size: 24px;
+}
+#elem2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+#elem2>p{
+    font-size: 12px;
+    width: 80%;
+    opacity: 0.4;
+}
+@media screen and (max-width: 768px) {
+    /* General reset for mobile */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: gilroy, sans-serif;
+    }
+
+    html, body {
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;  /* Prevent horizontal scrolling */
+    }
+
+    /* Main Section with Coca-Cola Background */
+    #main {
+        height: 100%;
+        width: 100%;
+        background-color: #000;
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png'); /* Coca-Cola logo as background */
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow-y: auto; /* Enable vertical scrolling */
+    }
+
+    /* Apply blur only to the background image */
+    #main::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: inherit;
+        background-size: cover;
+        background-position: center;
+        filter: blur(5px); /* Apply blur effect only to the background */
+        z-index: -1; /* Make sure it's behind all other content */
+    }
+
+    /* Navigation Section */
+    #nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        height: auto;
+        text-align: center;
+        position: relative;
+    }
+
+    #nav::before {
+        content: "Coca-Cola";
+        font-size: 20px;
+        font-weight: bold;
+        color: red;
+        margin-bottom: 10px;
+    }
+
+    #nav h1 {
+        font-size: 18px;
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    #nav-prt2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #nav h5 {
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    #nav img {
+        height: 40px;
+        width: auto;
+        display: block;
+        margin: 10px auto;
+    }
+
+    /* Content Section */
+    #content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        align-items: center;
+        padding: 0; /* Removed extra padding */
+    }
+
+    /* Left Section */
+    #left {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        order: 1; /* Make left appear first */
+    }
+
+    #left h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    #left p {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #left button {
+        background-color: red;
+        padding: 12px 24px;
+        border-radius: 30px;
+        font-size: 16px;
+        display: inline-flex;
+        align-items: center;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+
+    #left button i {
+        margin-right: 8px;
+    }
+
+    /* Right Section */
+    #right {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        order: 2; /* Make right appear second */
+    }
+
+    #right-elem {
+        width: 100%;
+    }
+
+    #elem1 {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #fff;
+        opacity: 0.6;
+        padding: 10px 0;
+    }
+
+    #elem1 h1, #elem2 {
+        font-size: 18px;
+    }
+
+    #elem2 p {
+        font-size: 14px;
+        opacity: 0.6;
+    }
+
+    /* Adjust image size */
+    #content>img {
+        height: 150px; /* Reduced image size */
+        width: 100%;
+        object-fit: cover;
+        margin-top: 20px;
+        z-index: -1; /* Ensure it does not overlap text */
+    }
+
+    /* Nutrition and Description Section */
+    .description, .nutrition {
+        margin-top: 20px;
+    }
+
+    /* Left, Right, and Image Section Order */
+    #left, #right, #content>img {
+        width: 100%;
+    }
+}
